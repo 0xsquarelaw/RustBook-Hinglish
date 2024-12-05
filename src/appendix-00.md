@@ -1,4 +1,3 @@
 # Appendix
 
-The following sections contain reference material you may find useful in your
-Rust journey.
+The following sections contain reference material, jo aapko usefull hoga in your Rust journey.

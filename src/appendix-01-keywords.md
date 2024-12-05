@@ -1,18 +1,15 @@
 ## Appendix A: Keywords
 
-The following list contains keywords that are reserved for current or future
-use by the Rust language. As such, they cannot be used as identifiers (except
-as raw identifiers as we’ll discuss in the “[Raw
-Identifiers][raw-identifiers]<!-- ignore -->” section). Identifiers are names
-of functions, variables, parameters, struct fields, modules, crates, constants,
-macros, static values, attributes, types, traits, or lifetimes.
+The following list contains keywords that are reserved for current or future. 
+Aur ye, identifiers ki trah use nahi kr sakte (exception here, raw identifiers h ham 
+usko discuss karenge “[RawIdentifiers][raw-identifiers]<!-- ignore -->” section me). Identifiers are names of functions, variables, parameters, struct fields, modules, 
+crates, constants,macros, static values, attributes, types, traits, or lifetimes.
 
 [raw-identifiers]: #raw-identifiers
 
 ### Keywords Currently in Use
 
-The following is a list of keywords currently in use, with their functionality
-described.
+Ye sari list h currently, in use keyword aur functionality described as below:
 
 - `as` - perform primitive casting, disambiguate the specific trait containing
   an item, or rename items in `use` statements
@@ -61,8 +58,7 @@ described.
 
 ### Keywords Reserved for Future Use
 
-The following keywords do not yet have any functionality but are reserved by
-Rust for potential future use.
+Ye sare keywords ke abhi functionality nahi h magar isko reserve krke rakhe h for future.
 
 - `abstract`
 - `become`
@@ -80,11 +76,11 @@ Rust for potential future use.
 
 ### Raw Identifiers
 
-_Raw identifiers_ are the syntax that lets you use keywords where they wouldn’t
-normally be allowed. You use a raw identifier by prefixing a keyword with `r#`.
+_Raw identifiers_ esse syntax h jo aapko reserved ko use karne ka mauka deta hai 
+jo normally allowed nahi h. Raw identifier ke prefix mein `r#` keyword add kare.
 
-For example, `match` is a keyword. If you try to compile the following function
-that uses `match` as its name:
+For example, `match` is a keyword. Agar aap compile krne ka try kare, jo ki yaha 
+`match` ko function name ki tarah use kr raha h:
 
 <span class="filename">Filename: src/main.rs</span>
 
@@ -104,9 +100,9 @@ error: expected identifier, found keyword `match`
   |    ^^^^^ expected identifier, found keyword
 ```
 
-The error shows that you can’t use the keyword `match` as the function
-identifier. To use `match` as a function name, you need to use the raw
-identifier syntax, like this:
+Ye error dikha raha h ki tum `match` keyword ko as function identifier use 
+nahi kr sakte. `match` as function name use krna h, to hame use krna hoga 
+raw identifier syntax, like this:
 
 <span class="filename">Filename: src/main.rs</span>
 
@@ -120,18 +116,17 @@ fn main() {
 }
 ```
 
-This code will compile without any errors. Note the `r#` prefix on the function
-name in its definition as well as where the function is called in `main`.
+Yeh code bina kisi error ke compile ho jayega. Function ki definition me aur 
+`main` ke function ko call karte waqt `r#` prefix ko note karo.
 
-Raw identifiers allow you to use any word you choose as an identifier, even if
-that word happens to be a reserved keyword. This gives us more freedom to
-choose identifier names, as well as lets us integrate with programs written in
-a language where these words aren’t keywords. In addition, raw identifiers
-allow you to use libraries written in a different Rust edition than your crate
-uses. For example, `try` isn’t a keyword in the 2015 edition but is in the 2018
-edition. If you depend on a library that’s written using the 2015 edition and
-has a `try` function, you’ll need to use the raw identifier syntax, `r#try` in
-this case, to call that function from your 2018 edition code. See [Appendix
-E][appendix-e]<!-- ignore --> for more information on editions.
+Raw identifiers hame pura freedom deta h kisi bhi word ko select krne me 
+identifier ki trah, even if wo reserved keyword hi ho. Iss tarah se ham
+esse words ko bhi choose kr sakte h jo dusre programs me keywords nahi h.
+In addition, raw identifiers hame help kr sakte h purane rust version se naye 
+rust versions me portability provide kr ke. For example, `try` keyword 2015 
+version me nahi tha, magar 2018 me introduce kiya gaya. Agar ham 2015 edition 
+library pe depend karte h aur `try` function h, to phir hame raw identifier 
+syntax,`r#try`use krna hoga, 2018 edition me wo function ko call krne ke liye. 
+See [AppendixE][appendix-e]<!-- ignore --> for more information on editions.
 
 [appendix-e]: appendix-05-editions.html
