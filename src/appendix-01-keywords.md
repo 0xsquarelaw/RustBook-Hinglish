@@ -79,7 +79,7 @@ Ye sare keywords ke abhi functionality nahi h magar isko reserve krke rakhe h fo
 _Raw identifiers_ esse syntax h jo aapko reserved ko use karne ka mauka deta hai 
 jo normally allowed nahi h. Raw identifier ke prefix mein `r#` keyword add kare.
 
-For example, `match` is a keyword. Agar aap compile krne ka try kare, jo ki yaha 
+For example, `match` ek keyword hai. Agar aap compile krne ka try kare, jo ki yaha 
 `match` ko function name ki tarah use kr raha h:
 
 <span class="filename">Filename: src/main.rs</span>
@@ -90,7 +90,7 @@ fn match(needle: &str, haystack: &str) -> bool {
 }
 ```
 
-you’ll get this error:
+Apko ye error aaega:
 
 ```text
 error: expected identifier, found keyword `match`
@@ -100,7 +100,7 @@ error: expected identifier, found keyword `match`
   |    ^^^^^ expected identifier, found keyword
 ```
 
-Ye error dikha raha h ki tum `match` keyword ko as function identifier use 
+Ye error dikha raha h ki app `match` keyword ko as function identifier use 
 nahi kr sakte. `match` as function name use krna h, to hame use krna hoga 
 raw identifier syntax, like this:
 
@@ -117,12 +117,12 @@ fn main() {
 ```
 
 Yeh code bina kisi error ke compile ho jayega. Function ki definition me aur 
-`main` ke function ko call karte waqt `r#` prefix ko note karo.
+`main` ke function ko call karte waqt `r#` prefix ko note kare.
 
 Raw identifiers hame pura freedom deta h kisi bhi word ko select krne me 
-identifier ki trah, even if wo reserved keyword hi ho. Iss tarah se ham
+identifier ki trah, chahe wo reserved keyword hi ho. Iss tarah se ham
 esse words ko bhi choose kr sakte h jo dusre programs me keywords nahi h.
-In addition, raw identifiers hame help kr sakte h purane rust version se naye 
+Aur raw identifiers hame help kr sakte h purane rust version se naye 
 rust versions me portability provide kr ke. For example, `try` keyword 2015 
 version me nahi tha, magar 2018 me introduce kiya gaya. Agar ham 2015 edition 
 library pe depend karte h aur `try` function h, to phir hame raw identifier 
